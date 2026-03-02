@@ -1,0 +1,48 @@
+# Entornos virtuales
+.venv/
+venv/
+ENV/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+auth-service/*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos de configuración local
+config.local.yaml
+config.local.yml
+settings_local.py
+
+# Directorios específicos del servicio
+auth-service/__pycache__/
+auth-service/*.egg-info/
+
+# Bases de datos
+*.db
+*.sqlite3
+
+# Archivos de caché
+.pytest_cache/
+.coverage
+htmlcov/
