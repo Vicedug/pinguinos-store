@@ -6,7 +6,7 @@ from passlib.context import CryptContext
 #Configuracion de Seguridad
 SECRET_KEY = "TU_LLAVE_SECRETA_SUPER_SEGURA_DE_LA_ANTARTIDA" #Sal o clave maestra del sistema: se usa para la firma JWT
 ALGORITHM = "HS256" #Algoritmo de firma
-ACCES_TOKEN_EXPIRE_MINUTES = 30 #vida util del token
+ACCESS_TOKEN_EXPIRE_MINUTES = 30 #vida util del token
 
 #Hashing de contraseñas: #BCRYPT: Genera Hashes seguros y costosos
                          #deprecated=auto: actuliza los hashes viejos de manera automatica cuando el usuario inicia sesion
@@ -33,7 +33,7 @@ def crear_token_acceso(data: dict, expires_delta: Optional[timedelta] = None):
     if expires_delta:
         expire = ahora + expires_delta
     else:
-        expire = ahora + timedelta(minutes=ACCES_TOKEN_EXPIRE_MINUTES) 
+        expire = ahora + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES) 
 
     #Se añade el claim de expiracion al payload
     to_encode.update({"exp":expire})
